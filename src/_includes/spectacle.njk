@@ -7,7 +7,13 @@ isHome: false
 </div>
 <div class="show-rule"></div>
 
-<div class="show-body show-body--with-photo">
+<div class="show-body show-body--with-photo{% if photo_position == 'gauche' %} show-body--photo-left{% endif %}">
+  {% if photo and photo_position == 'gauche' %}
+  <div class="show-photo" role="img" aria-label="Photographie du spectacle {{ title }}">
+    <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
+  </div>
+  {% endif %}
+
   <div class="show-text">
     <div class="facts">
       {{ facts | nl2br | safe }}
@@ -19,9 +25,15 @@ isHome: false
         <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
       {% endif %}
     </div>
+
+    {% if credits %}
+    <div class="credits">
+      {{ credits | nl2br | safe }}
+    </div>
+    {% endif %}
   </div>
 
-  {% if photo %}
+  {% if photo and photo_position != 'gauche' %}
   <div class="show-photo" role="img" aria-label="Photographie du spectacle {{ title }}">
     <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
   </div>
