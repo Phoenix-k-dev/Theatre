@@ -25,6 +25,8 @@ jobs:
 
       - name: Construire le site
         run: npm run build
+        env:
+          PATH_PREFIX: /Theatre/
 
       - name: Publier le résultat sur la branche gh-pages
         uses: peaceiris/actions-gh-pages@v4
