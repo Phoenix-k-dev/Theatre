@@ -20,7 +20,7 @@
         hash.indexOf("recovery_token") !== -1 ||
         hash.indexOf("email_change_token") !== -1
       );
-    if (isIdentityToken && window.location.pathname.indexOf("/admin") !== 0) {
+    if (isIdentityToken && window.location.pathname.indexOf("/admin") === -1) {
       window.location.replace("/admin/" + hash);
     }
   })();
