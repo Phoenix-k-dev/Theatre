@@ -35,6 +35,9 @@ module.exports = function (eleventyConfig) {
       data: "_data",
       output: "_site",
     },
+    // Sur Netlify (racine du domaine), pas de préfixe : PATH_PREFIX n'est pas défini.
+    // Sur GitHub Pages (sous-dossier /Theatre/), le workflow définit PATH_PREFIX=/Theatre/.
+    pathPrefix: process.env.PATH_PREFIX || "/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
   };
