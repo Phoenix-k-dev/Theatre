@@ -6,7 +6,7 @@
 <title>Edgar BonŒil – Le Théâtre Cabosse</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/Theatre/assets/css/style.css">
 <script>
   // Redirige automatiquement vers /admin/ si on arrive ici via un lien
   // d'invitation, de confirmation ou de récupération de mot de passe Netlify
@@ -21,7 +21,7 @@
         hash.indexOf("email_change_token") !== -1
       );
     if (isIdentityToken && window.location.pathname.indexOf("/admin") === -1) {
-      window.location.replace("/admin/" + hash);
+      window.location.replace("/Theatre/admin/" + hash);
     }
   })();
 </script>
@@ -40,39 +40,39 @@
 </svg>
 
 <header>
-  <a class="logo-badge" href="/" aria-label="Retour à l'accueil"><img src="/assets/img/logo.png" alt="Logo Théâtre Cabosse"></a>
+  <a class="logo-badge" href="/Theatre/" aria-label="Retour à l'accueil"><img src="/Theatre/assets/img/logo.png" alt="Logo Théâtre Cabosse"></a>
   <div class="divider"></div>
 
   
     <div class="top-row">
       <div class="brand-block">
-        <a href="/">LE THÉÂTRE CABOSSE</a>
+        <a href="/Theatre/">LE THÉÂTRE CABOSSE</a>
         <p>Théâtre burlesque et d&#39;objets</p>
       </div>
       <nav aria-label="Navigation principale">
         <ul>
           <li class="has-submenu">
-            <a href="/#spectacles">Les Spectacles</a>
+            <a href="/Theatre/#spectacles">Les Spectacles</a>
             <ul class="submenu">
               
-                <li><a href="/spectacles/cabaret-miracoli/">Cabaret Miracoli</a></li>
+                <li><a href="/Theatre/spectacles/cabaret-miracoli/">Cabaret Miracoli</a></li>
               
-                <li><a href="/spectacles/la-balle-est-dans-ton-camp/">La Balle est Dans ton Camp</a></li>
+                <li><a href="/Theatre/spectacles/la-balle-est-dans-ton-camp/">La Balle est Dans ton Camp</a></li>
               
-                <li><a href="/spectacles/edgar-bonoeil/">Edgar BonŒil</a></li>
+                <li><a href="/Theatre/spectacles/edgar-bonoeil/">Edgar BonŒil</a></li>
               
-                <li><a href="/spectacles/magie-oulala/">Magie Oulala</a></li>
+                <li><a href="/Theatre/spectacles/magie-oulala/">Magie Oulala</a></li>
               
-                <li><a href="/spectacles/tvbiscuit/">TVBiscuit</a></li>
+                <li><a href="/Theatre/spectacles/tvbiscuit/">TVBiscuit</a></li>
               
-                <li><a href="/spectacles/lost-el-mancho/">Lost El Mancho</a></li>
+                <li><a href="/Theatre/spectacles/lost-el-mancho/">Lost El Mancho</a></li>
               
             </ul>
           </li>
-          <li><a href="/#agenda">Agenda</a></li>
-          <li><a href="/la-compagnie/">La Compagnie</a></li>
-          <li><a href="/les-amis-des-chiffons-et-dailleurs/">Les Amis des chiffons et d'ailleurs</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/Theatre/#agenda">Agenda</a></li>
+          <li><a href="/Theatre/la-compagnie/">La Compagnie</a></li>
+          <li><a href="/Theatre/les-amis-des-chiffons-et-dailleurs/">Les Amis des chiffons et d'ailleurs</a></li>
+          <li><a href="/Theatre/contact/">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -107,9 +107,9 @@ Création 2020<br>
 
 
 <footer>
-  <a href="/">← Retour à l'accueil</a><br>
-  <a href="/" class="footer-logo" aria-label="Retour à l'accueil">
-    <img src="/assets/img/logo.png" alt="Logo Théâtre Cabosse">
+  <a href="/Theatre/">← Retour à l'accueil</a><br>
+  <a href="/Theatre/" class="footer-logo" aria-label="Retour à l'accueil">
+    <img src="/Theatre/assets/img/logo.png" alt="Logo Théâtre Cabosse">
   </a>
   <div class="socials">
     <a href="https://www.facebook.com/profile.php?id=100067525628763" aria-label="Facebook" class="social-icon">
@@ -120,7 +120,7 @@ Création 2020<br>
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
       <span>YouTube</span>
     </a>
-    <a href="/contact/" class="social-icon">
+    <a href="/Theatre/contact/" class="social-icon">
       <span>Contact</span>
     </a>
   </div>
