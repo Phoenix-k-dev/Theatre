@@ -208,7 +208,17 @@ footer .rights{font-family:'Jost',sans-serif; font-size:0.72rem; opacity:0.55; l
 
 @media (min-width:860px){
   .show-body--with-photo{grid-template-columns:1.1fr 0.9fr; gap:60px;}
+  .show-body--photo-left{grid-template-columns:0.9fr 1.1fr;}
+  .show-body--photo-left .show-photo{order:-1;}
   .show-photo{margin-top:0;}
+}
+
+.credits{
+  margin-top:32px;
+  font-family:'Jost',sans-serif;
+  font-size:0.9rem;
+  line-height:1.8;
+  color:var(--brique);
 }
 
 @media (max-width:640px){
