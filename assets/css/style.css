@@ -190,7 +190,7 @@ footer .rights{font-family:'Jost',sans-serif; font-size:0.72rem; opacity:0.55; l
 .dossier-btn:focus-visible{outline:2px solid var(--brique); outline-offset:3px;}
 
 .show-photo{
-  position:relative; z-index:2; width:100%; aspect-ratio:4/5; max-height:640px;
+  position:relative; z-index:2; width:100%; aspect-ratio:3/2; max-height:520px;
   background:linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.45)),
              linear-gradient(135deg,#243b2e,#3d2b26 45%, #8a3f2e 120%);
   display:flex; align-items:flex-end; justify-content:flex-start; padding:20px;
