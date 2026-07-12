@@ -9,7 +9,7 @@ facts: |
   Se joue en intérieur comme en extérieur
   Durée : 30 ou 40 minutes
   Création 2022–2023
-photo: ""
+photo: "/assets/img/cabaret-miracoli.jpg"
 video: "https://youtu.be/389i7XRCyDw"
 dossier: "https://theatrecabosse.com/wp-content/uploads/2023/01/Cabaret-Miracoli-Dossier-de-diffusion-2023.pdf"
 ---
