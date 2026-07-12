@@ -6,7 +6,7 @@ isHome: true
 <div class="hero-photo-wrap">
   <div class="hero-photo" role="img" aria-label="Photographie du spectacle à la une">
     {% if site.photo_accueil %}
-      <img src="{{ site.photo_accueil }}" alt="Photographie à la une">
+      <img src="{{ site.photo_accueil | url }}" alt="Photographie à la une">
     {% else %}
       <span class="caption">Photo à la une</span>
     {% endif %}
@@ -25,7 +25,7 @@ isHome: true
   </div>
   <div class="bill-grid">
     {% for spectacle in collections.spectacles %}
-    <a class="bill-card" href="{{ spectacle.url }}">
+    <a class="bill-card" href="{{ spectacle.url | url }}">
       <h3>{{ spectacle.data.title }}</h3>
       <p>{{ spectacle.data.accroche }}</p>
     </a>
