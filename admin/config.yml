@@ -22,6 +22,13 @@ collections:
       - { label: "Accroche (résumé affiché sur la page d'accueil)", name: "accroche", widget: "text" }
       - { label: "Fiche technique", name: "facts", widget: "text", hint: "Une information par ligne (public, durée, création...)" }
       - { label: "Photo du spectacle", name: "photo", widget: "image", required: false }
+      - label: "Position de la photo"
+        name: "photo_position"
+        widget: "select"
+        options: ["droite", "gauche"]
+        default: "droite"
+        required: false
+      - { label: "Crédits (mise en scène, regard complice...)", name: "credits", widget: "text", required: false, hint: "Une ligne par information" }
       - { label: "Lien vidéo YouTube", name: "video", widget: "string", required: false, hint: "Colle simplement le lien de la vidéo YouTube (ex: https://youtu.be/xxxx)" }
       - { label: "Dossier de diffusion (PDF)", name: "dossier", widget: "file", required: false }
       - { label: "Texte de présentation", name: "body", widget: "markdown" }
