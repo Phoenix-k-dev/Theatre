@@ -6,7 +6,7 @@
 <title>{{ title }} – {{ site.titre }}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
 <script>
   // Redirige automatiquement vers /admin/ si on arrive ici via un lien
   // d'invitation, de confirmation ou de récupération de mot de passe Netlify
@@ -20,8 +20,8 @@
         hash.indexOf("recovery_token") !== -1 ||
         hash.indexOf("email_change_token") !== -1
       );
-    if (isIdentityToken && window.location.pathname.indexOf("/admin") !== 0) {
-      window.location.replace("/admin/" + hash);
+    if (isIdentityToken && window.location.pathname.indexOf("/admin") === -1) {
+      window.location.replace("{{ '/admin/' | url }}" + hash);
     }
   })();
 </script>
@@ -40,48 +40,48 @@
 </svg>
 
 <header>
-  <a class="logo-badge" href="/" aria-label="Retour à l'accueil"><img src="/assets/img/logo.png" alt="Logo Théâtre Cabosse"></a>
+  <a class="logo-badge" href="{{ '/' | url }}" aria-label="Retour à l'accueil"><img src="{{ '/assets/img/logo.png' | url }}" alt="Logo Théâtre Cabosse"></a>
   <div class="divider"></div>
 
   {% if isHome %}
-    <h1 class="title"><a href="/" class="title-link">{{ site.titre | upper }}</a></h1>
+    <h1 class="title"><a href="{{ '/' | url }}" class="title-link">{{ site.titre | upper }}</a></h1>
     <p class="tagline">{{ site.tagline }}</p>
     <nav aria-label="Navigation principale">
       <ul>
         <li class="has-submenu">
-          <a href="/#spectacles">Les Spectacles</a>
+          <a href="{{ '/#spectacles' | url }}">Les Spectacles</a>
           <ul class="submenu">
             {% for spectacle in collections.spectacles %}
-              <li><a href="{{ spectacle.url }}">{{ spectacle.data.title }}</a></li>
+              <li><a href="{{ spectacle.url | url }}">{{ spectacle.data.title }}</a></li>
             {% endfor %}
           </ul>
         </li>
-        <li><a href="/#agenda">Agenda</a></li>
-        <li><a href="/la-compagnie/">La Compagnie</a></li>
-        <li><a href="/les-amis-des-chiffons-et-dailleurs/">Les Amis des chiffons et d'ailleurs</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="{{ '/#agenda' | url }}">Agenda</a></li>
+        <li><a href="{{ '/la-compagnie/' | url }}">La Compagnie</a></li>
+        <li><a href="{{ '/les-amis-des-chiffons-et-dailleurs/' | url }}">Les Amis des chiffons et d'ailleurs</a></li>
+        <li><a href="{{ '/contact/' | url }}">Contact</a></li>
       </ul>
     </nav>
   {% else %}
     <div class="top-row">
       <div class="brand-block">
-        <a href="/">{{ site.titre | upper }}</a>
+        <a href="{{ '/' | url }}">{{ site.titre | upper }}</a>
         <p>{{ site.tagline }}</p>
       </div>
       <nav aria-label="Navigation principale">
         <ul>
           <li class="has-submenu">
-            <a href="/#spectacles">Les Spectacles</a>
+            <a href="{{ '/#spectacles' | url }}">Les Spectacles</a>
             <ul class="submenu">
               {% for spectacle in collections.spectacles %}
-                <li><a href="{{ spectacle.url }}">{{ spectacle.data.title }}</a></li>
+                <li><a href="{{ spectacle.url | url }}">{{ spectacle.data.title }}</a></li>
               {% endfor %}
             </ul>
           </li>
-          <li><a href="/#agenda">Agenda</a></li>
-          <li><a href="/la-compagnie/">La Compagnie</a></li>
-          <li><a href="/les-amis-des-chiffons-et-dailleurs/">Les Amis des chiffons et d'ailleurs</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="{{ '/#agenda' | url }}">Agenda</a></li>
+          <li><a href="{{ '/la-compagnie/' | url }}">La Compagnie</a></li>
+          <li><a href="{{ '/les-amis-des-chiffons-et-dailleurs/' | url }}">Les Amis des chiffons et d'ailleurs</a></li>
+          <li><a href="{{ '/contact/' | url }}">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -91,9 +91,9 @@
 {{ content | safe }}
 
 <footer>
-  {% if not isHome %}<a href="/">← Retour à l'accueil</a><br>{% endif %}
-  <a href="/" class="footer-logo" aria-label="Retour à l'accueil">
-    <img src="/assets/img/logo.png" alt="Logo Théâtre Cabosse">
+  {% if not isHome %}<a href="{{ '/' | url }}">← Retour à l'accueil</a><br>{% endif %}
+  <a href="{{ '/' | url }}" class="footer-logo" aria-label="Retour à l'accueil">
+    <img src="{{ '/assets/img/logo.png' | url }}" alt="Logo Théâtre Cabosse">
   </a>
   <div class="socials">
     <a href="{{ site.facebook_url }}" aria-label="Facebook" class="social-icon">
@@ -104,7 +104,7 @@
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
       <span>YouTube</span>
     </a>
-    <a href="/contact/" class="social-icon">
+    <a href="{{ '/contact/' | url }}" class="social-icon">
       <span>Contact</span>
     </a>
   </div>
