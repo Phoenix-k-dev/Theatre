@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: La Compagnie
+isHome: false
+permalink: /la-compagnie/index.html
+---
+<div class="show-title">
+  <h1>La Compagnie</h1>
+</div>
+<div class="show-rule"></div>
+
+<div class="section" style="padding-top:50px;">
+  <div class="description" style="max-width:760px; margin:0 auto;">
+    {{ site.compagnie_histoire | nl2br | safe }}
+  </div>
+
+  <div style="max-width:760px; margin:50px auto 0;">
+    <h2 style="font-family:'Jost',sans-serif; font-weight:400; letter-spacing:0.06em; font-size:1.3rem; margin-bottom:20px;">L'équipe Chic et Choc :</h2>
+    <ul style="list-style:none; font-size:1.1rem; line-height:1.9;">
+      {% for personne in site.compagnie_equipe %}
+        <li><strong>{{ personne.nom }}</strong> : {{ personne.role }}</li>
+      {% endfor %}
+    </ul>
+    <p style="margin-top:30px; font-style:italic;">Et puis un très grand MERCI à tout ceux qui me soutiennent depuis le début…</p>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{
+  "name": "theatre-cabosse",
+  "version": "1.0.0",
+  "description": "Site du Théâtre Cabosse, généré avec Eleventy et éditable via Decap CMS",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

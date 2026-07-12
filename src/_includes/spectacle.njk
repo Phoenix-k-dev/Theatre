@@ -1,0 +1,43 @@
+---
+layout: base.njk
+isHome: false
+---
+<div class="show-title">
+  <h1>{{ title }}</h1>
+</div>
+<div class="show-rule"></div>
+
+<div class="show-body">
+  <div class="facts">
+    {{ facts | nl2br | safe }}
+  </div>
+
+  <div class="description">
+    {{ content | safe }}
+    {% if dossier %}
+      <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
+    {% endif %}
+  </div>
+</div>
+
+{% if photo %}
+<div class="show-body" style="padding-top:0;">
+  <div class="show-photo" role="img" aria-label="Photographie du spectacle {{ title }}">
+    <img src="{{ photo }}" alt="Photographie du spectacle {{ title }}">
+  </div>
+</div>
+{% endif %}
+
+{% if video %}
+<div class="show-body" style="padding-top:0;">
+  <div class="video-embed">
+    <iframe
+      src="{{ video | youtubeEmbed }}"
+      title="Vidéo du spectacle {{ title }}"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+{% endif %}

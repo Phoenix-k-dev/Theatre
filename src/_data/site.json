@@ -1,0 +1,38 @@
+{
+  "titre": "Le Théâtre Cabosse",
+  "tagline": "Théâtre burlesque et d'objets",
+  "photo_accueil": "/assets/img/photo-accueil.jpg",
+  "citation_texte": "L'humour renforce notre instinct de survie et sauvegarde notre santé d'esprit.",
+  "citation_auteur": "Charlie Chaplin",
+  "agenda_texte": "Les dates de tournée sont annoncées au fil de la saison. Suivez la compagnie sur les réseaux pour ne rien rater des prochaines représentations.",
+  "facebook_url": "https://www.facebook.com/profile.php?id=100067525628763",
+  "youtube_url": "https://www.youtube.com/@theatrecabosse",
+  "contact_email": "mailto:theatrecabosse@gmail.com",
+  "contact_nom_diffusion": "Mathilde Blot",
+  "contact_role_diffusion": "Chargée de diffusion pour le Théâtre Cabosse",
+  "contact_email_diffusion": "theatrecabosse.diff@gmail.com",
+  "contact_tel_diffusion": "06 22 80 08 77",
+  "contact_adresse": "34200 Sète",
+  "contact_tel": "06 83 15 40 40",
+  "contact_email_general": "theatrecabosse@gmail.com",
+  "compagnie_histoire": "Le Théâtre Cabosse a été fondé en 2003 par Patrick Ruel.\n\nComédien, marionnettiste, autodidacte de par les premières années, se formant aux arts de la rue, en explorant la marionnette à fils et le regard de l'autre au travers de petites scénettes humoristiques.\nLes Arts bruts, la rencontre avec le clown et la folie ardente de notre quotidien font parties des outils pour modeler ses Histoires. Ainsi le spectacle TV Biscuit La Télévision qui se croque … fait son apparition.\n\nDu spectacle marionnettique conté au théâtre forain, la compagnie se veut de rester cohérente avec notre société, s'amuser avec les mots justes et l'humour, être aussi incisif que bienveillante. Les histoires racontées par Lost el Mancho, Edgar BonOeil et La Balle est dans ton camp active le plaisir coupable de rire de tout avec le comédien et même de lui bien sûr.\nNe prendre pour des idiots que ceux qui veulent le rester, car au fond de nous, il y a toujours un idiot qui nous fait rire...",
+  "compagnie_equipe": [
+    { "nom": "Camille Dorman et Ninon Degraaff", "role": "illustratrice tout terrain et dompteuse de raison." },
+    { "nom": "Christophe Boucher", "role": "ingénieur lumière, son et autres mécanique-ries, arrière petit fils de Méliès." },
+    { "nom": "Mathilde Blot", "role": "Super Héroïne de la diffusion" },
+    { "nom": "Eric Seban", "role": "Cie Pile Poil au millimètre — Regard extérieur de l'intérieur" },
+    { "nom": "Quevin Nogues", "role": "Photographe à l'oeil de velours" }
+  ],
+  "amis_liste": [
+    { "nom": "Camille Dorman", "role": "illustratrice" },
+    { "nom": "Christophe Boucher", "role": "Musique, arts numériques, conception systèmes scénographiques et de régies" },
+    { "nom": "Mathilde Blot", "role": "Chargée de diffusion de la compagnie" },
+    { "nom": "La pendue", "role": "Marionnette" },
+    { "nom": "Cie Areski", "role": "Spectacle d'objet et marionnette" },
+    { "nom": "The Pumcliks", "role": "Nomades Musicaux" },
+    { "nom": "BiTonio Anthony Mainguet", "role": "Marionnette" },
+    { "nom": "Fanfare Algdc", "role": "Spectacle, poésie, sueur et folie." },
+    { "nom": "Xavier Constantine", "role": "Spectacle de magie" },
+    { "nom": "Cabaret du Fil à Retordre", "role": "Cabaret marionnettique" }
+  ]
+}

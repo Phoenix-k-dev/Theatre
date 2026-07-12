@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: Accueil
+isHome: true
+---
+<div class="hero-photo-wrap">
+  <div class="hero-photo" role="img" aria-label="Photographie du spectacle à la une">
+    {% if site.photo_accueil %}
+      <img src="{{ site.photo_accueil }}" alt="Photographie à la une">
+    {% else %}
+      <span class="caption">Photo à la une</span>
+    {% endif %}
+  </div>
+</div>
+
+<blockquote>
+  « {{ site.citation_texte }} »
+  <span class="quote-author">{{ site.citation_auteur | upper }}</span>
+</blockquote>
+
+<section class="section" id="spectacles">
+  <div class="section-head">
+    <h2>Les Spectacles</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="bill-grid">
+    {% for spectacle in collections.spectacles %}
+    <a class="bill-card" href="{{ spectacle.url }}">
+      <h3>{{ spectacle.data.title }}</h3>
+      <p>{{ spectacle.data.accroche }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" id="agenda">
+  <div class="section-head">
+    <h2>Agenda</h2>
+    <div class="rule"></div>
+  </div>
+  <p style="text-align:center; max-width:600px; margin:0 auto;">{{ site.agenda_texte }}</p>
+</section>

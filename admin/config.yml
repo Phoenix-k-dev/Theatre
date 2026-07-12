@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Dossier où sont stockées les images/PDF téléversés depuis l'admin
+media_folder: "src/assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "spectacles"
+    label: "Spectacles"
+    label_singular: "Spectacle"
+    folder: "src/spectacles"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Ordre d'affichage dans le menu", name: "order", widget: "number", default: 1, hint: "1 = premier de la liste" }
+      - { label: "Accroche (résumé affiché sur la page d'accueil)", name: "accroche", widget: "text" }
+      - { label: "Fiche technique", name: "facts", widget: "text", hint: "Une information par ligne (public, durée, création...)" }
+      - { label: "Photo du spectacle", name: "photo", widget: "image", required: false }
+      - { label: "Lien vidéo YouTube", name: "video", widget: "string", required: false, hint: "Colle simplement le lien de la vidéo YouTube (ex: https://youtu.be/xxxx)" }
+      - { label: "Dossier de diffusion (PDF)", name: "dossier", widget: "file", required: false }
+      - { label: "Texte de présentation", name: "body", widget: "markdown" }
+
+  - name: "reglages"
+    label: "Réglages du site"
+    files:
+      - file: "src/_data/site.json"
+        label: "Contenu général"
+        name: "site"
+        fields:
+          - { label: "Titre du site", name: "titre", widget: "string" }
+          - { label: "Accroche sous le titre", name: "tagline", widget: "string" }
+          - { label: "Photo mise en avant sur l'accueil", name: "photo_accueil", widget: "image", required: false }
+          - { label: "Texte de la citation", name: "citation_texte", widget: "text" }
+          - { label: "Auteur de la citation", name: "citation_auteur", widget: "string" }
+          - { label: "Texte de la section Agenda", name: "agenda_texte", widget: "text" }
+          - { label: "Lien Facebook", name: "facebook_url", widget: "string" }
+          - { label: "Lien YouTube", name: "youtube_url", widget: "string" }
+          - { label: "Email de contact (lien mailto)", name: "contact_email", widget: "string" }
+          - { label: "Nom (contact diffusion)", name: "contact_nom_diffusion", widget: "string" }
+          - { label: "Rôle (contact diffusion)", name: "contact_role_diffusion", widget: "string" }
+          - { label: "Email (contact diffusion)", name: "contact_email_diffusion", widget: "string" }
+          - { label: "Téléphone (contact diffusion)", name: "contact_tel_diffusion", widget: "string" }
+          - { label: "Adresse de la compagnie", name: "contact_adresse", widget: "string" }
+          - { label: "Téléphone général", name: "contact_tel", widget: "string" }
+          - { label: "Email général", name: "contact_email_general", widget: "string" }
+          - { label: "Texte de présentation de la compagnie", name: "compagnie_histoire", widget: "text" }
+          - label: "Équipe de la compagnie"
+            name: "compagnie_equipe"
+            widget: "list"
+            fields:
+              - { label: "Nom", name: "nom", widget: "string" }
+              - { label: "Rôle", name: "role", widget: "string" }
+          - label: "Liste des Amis des chiffons et d'ailleurs"
+            name: "amis_liste"
+            widget: "list"
+            fields:
+              - { label: "Nom", name: "nom", widget: "string" }
+              - { label: "Rôle / spécialité", name: "role", widget: "string" }

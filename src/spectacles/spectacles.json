@@ -1,0 +1,3 @@
+{
+  "permalink": "/spectacles/{{ page.fileSlug }}/index.html"
+}

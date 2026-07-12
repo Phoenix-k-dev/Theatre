@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: Contact
+isHome: false
+permalink: /contact/index.html
+---
+<div class="show-title">
+  <h1>Contact</h1>
+</div>
+<div class="show-rule"></div>
+
+<div class="section" style="padding-top:50px;">
+  <div style="max-width:560px; margin:0 auto; font-size:1.15rem; line-height:1.9;">
+    <p>
+      <strong>{{ site.contact_nom_diffusion }}</strong><br>
+      {{ site.contact_role_diffusion }}<br>
+      <a href="mailto:{{ site.contact_email_diffusion }}">{{ site.contact_email_diffusion }}</a><br>
+      {{ site.contact_tel_diffusion }}
+    </p>
+
+    <p style="margin-top:30px;">
+      <strong>{{ site.titre }}</strong><br>
+      {{ site.contact_adresse }}<br>
+      {{ site.contact_tel }}<br>
+      <a href="mailto:{{ site.contact_email_general }}">{{ site.contact_email_general }}</a>
+    </p>
+
+    <p style="margin-top:30px;">
+      <a href="{{ site.facebook_url }}">{{ site.facebook_url }}</a>
+    </p>
+  </div>
+</div>

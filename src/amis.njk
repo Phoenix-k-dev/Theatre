@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Les Amis des chiffons et d'ailleurs
+isHome: false
+permalink: /les-amis-des-chiffons-et-dailleurs/index.html
+---
+<div class="show-title">
+  <h1>Les Amis des chiffons et d'ailleurs</h1>
+</div>
+<div class="show-rule"></div>
+
+<div class="show-body">
+  <ul style="list-style:none; font-size:1.1rem; line-height:1.9; grid-column:1/-1; max-width:640px;">
+    {% for ami in site.amis_liste %}
+      <li style="margin-bottom:14px;">
+        <strong style="color:var(--brique);">{{ ami.nom }}</strong><br>
+        {{ ami.role }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
