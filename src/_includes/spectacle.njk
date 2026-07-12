@@ -7,26 +7,26 @@ isHome: false
 </div>
 <div class="show-rule"></div>
 
-<div class="show-body">
-  <div class="facts">
-    {{ facts | nl2br | safe }}
+<div class="show-body show-body--with-photo">
+  <div class="show-text">
+    <div class="facts">
+      {{ facts | nl2br | safe }}
+    </div>
+
+    <div class="description">
+      {{ content | safe }}
+      {% if dossier %}
+        <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
+      {% endif %}
+    </div>
   </div>
 
-  <div class="description">
-    {{ content | safe }}
-    {% if dossier %}
-      <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
-    {% endif %}
-  </div>
-</div>
-
-{% if photo %}
-<div class="show-body" style="padding-top:0;">
+  {% if photo %}
   <div class="show-photo" role="img" aria-label="Photographie du spectacle {{ title }}">
     <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
   </div>
+  {% endif %}
 </div>
-{% endif %}
 
 {% if video %}
 <div class="show-body" style="padding-top:0;">
