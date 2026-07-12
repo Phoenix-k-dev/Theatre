@@ -9,7 +9,12 @@ facts: |
   Tout Public à partir de 8 ans
   Durée 20 ou 30 min.
   Le spectacle se joue en intérieur comme en extérieur
-photo: ""
+photo: "/assets/img/la-balle-est-dans-ton-camp.jpg"
+photo_position: gauche
+credits: |
+  Mise en Scène et interprétation
+  Patrick Ruel
+  Regard Complice Eric Séban, Cie Pile Poil au millimetre
 video: ""
 dossier: "https://theatrecabosse.com/wp-content/uploads/2023/01/La-Balle-est-dans-ton-camp-fiche-technique-JANV-2020_compressed-1.pdf"
 ---
