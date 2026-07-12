@@ -23,7 +23,7 @@ isHome: false
 {% if photo %}
 <div class="show-body" style="padding-top:0;">
   <div class="show-photo" role="img" aria-label="Photographie du spectacle {{ title }}">
-    <img src="{{ photo }}" alt="Photographie du spectacle {{ title }}">
+    <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
   </div>
 </div>
 {% endif %}
