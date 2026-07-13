@@ -10,6 +10,7 @@ facts: |
   Durée : 40 minutes
   Création 2017
 photo: "/asset/img/LOST-EL-MANCHO-12-1024x684.jpg"
+photo_ratio: portrait
 video: "https://www.youtube.com/watch?v=PXgkErXbgs4&t=1s"
 dossier: ""
 ---
