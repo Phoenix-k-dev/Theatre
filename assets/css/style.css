@@ -14,6 +14,20 @@ body{
   position:relative;
   min-height:100vh;
 }
+
+/* Variantes de police, sélectionnables depuis l'admin (site.police) */
+body.police-elegant{ --f-titre:'Jost',sans-serif; --f-texte:'Cormorant Garamond',serif; }
+body.police-doux{ --f-titre:'Quicksand',sans-serif; --f-texte:'Quicksand',sans-serif; }
+body.police-classique{ --f-titre:'Playfair Display',serif; --f-texte:'Libre Baskerville',serif; }
+
+body.police-doux{font-family:var(--f-texte);}
+body.police-classique{font-family:var(--f-texte);}
+body.police-doux h1.title, body.police-doux nav a, body.police-doux .logo-badge span,
+body.police-doux .section-head h2, body.police-doux .btn, body.police-doux .dossier-btn{font-family:var(--f-titre);}
+body.police-classique h1.title, body.police-classique nav a, body.police-classique .logo-badge span,
+body.police-classique .section-head h2, body.police-classique .btn, body.police-classique .dossier-btn{font-family:var(--f-titre);}
+body.police-doux .tagline, body.police-doux blockquote,
+body.police-classique .tagline, body.police-classique blockquote{font-family:var(--f-texte);}
 @media (prefers-reduced-motion: reduce){*{animation:none !important; transition:none !important;}}
 
 .mechanical-bg{
@@ -160,6 +174,17 @@ footer > a{
 .footer-logo img{width:70px; height:auto; display:block; margin:0 auto;}
 .footer-logo:hover, .footer-logo:focus-visible{transform:scale(1.05);}
 .footer-logo:focus-visible{outline:2px solid var(--brique); outline-offset:4px;}
+.contact-social{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 24px;
+  border:1px solid var(--encre);
+  color:var(--encre);
+  text-decoration:none;
+  font-family:'Jost',sans-serif;
+  font-size:0.9rem;
+  transition:background 0.2s ease, color 0.2s ease;
+}
+.contact-social:hover, .contact-social:focus-visible{background:var(--encre); color:var(--parchemin-clair);}
 .socials{display:flex; justify-content:center; gap:26px; margin:16px 0 20px; font-family:'Jost',sans-serif; font-size:0.85rem;}
 .socials a{color:var(--encre); text-decoration:none; border-bottom:1px solid transparent;}
 .socials a:hover, .socials a:focus-visible{border-color:var(--brique);}
@@ -190,7 +215,7 @@ footer .rights{font-family:'Jost',sans-serif; font-size:0.72rem; opacity:0.55; l
 .dossier-btn:focus-visible{outline:2px solid var(--brique); outline-offset:3px;}
 
 .show-photo{
-  position:relative; z-index:2; width:100%; aspect-ratio:3/2; max-height:520px;
+  position:relative; z-index:2; width:100%; aspect-ratio:3/4; max-height:640px;
   background:linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.45)),
              linear-gradient(135deg,#243b2e,#3d2b26 45%, #8a3f2e 120%);
   display:flex; align-items:flex-end; justify-content:flex-start; padding:20px;
@@ -207,10 +232,15 @@ footer .rights{font-family:'Jost',sans-serif; font-size:0.72rem; opacity:0.55; l
 .video-embed iframe{position:absolute; top:0; left:0; width:100%; height:100%; border:0;}
 
 @media (min-width:860px){
-  .show-body--with-photo{grid-template-columns:1.1fr 0.9fr; gap:60px;}
+  .show-body--with-photo{grid-template-columns:1.1fr 0.9fr; gap:60px; align-items:stretch;}
   .show-body--photo-left{grid-template-columns:0.9fr 1.1fr;}
   .show-body--photo-left .show-photo{order:-1;}
-  .show-photo{margin-top:0;}
+  .show-body--with-photo .show-photo{
+    aspect-ratio:auto;
+    height:100%;
+    max-height:none;
+  }
+  .show-body--with-photo .show-photo img{object-fit:contain; background:rgba(0,0,0,0.15);}
 }
 
 .credits{
