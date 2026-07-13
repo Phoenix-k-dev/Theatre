@@ -35,6 +35,7 @@ collections:
           - { label: "Paysage (large)", value: "paysage" }
           - { label: "Portrait (haut)", value: "portrait" }
           - { label: "Carré", value: "carre" }
+          - { label: "Ajusté à la hauteur du texte", value: "ajuste" }
         default: "portrait"
         required: false
       - { label: "Crédits (mise en scène, regard complice...)", name: "credits", widget: "text", required: false, hint: "Une ligne par information" }
