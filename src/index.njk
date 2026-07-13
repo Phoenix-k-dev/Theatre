@@ -38,5 +38,26 @@ isHome: true
     <h2>Agenda</h2>
     <div class="rule"></div>
   </div>
-  <p style="text-align:center; max-width:600px; margin:0 auto;">{{ site.agenda_texte }}</p>
+
+  {% if collections.datesAvenir.length > 0 %}
+    <div class="agenda-ticker-wrap">
+      <div class="agenda-ticker">
+        {% for d in collections.datesAvenir %}
+          <span class="agenda-ticker-item">
+            📅 {{ d.data.date | dateFr }} — <strong>{{ d.data.spectacle }}</strong> — {{ d.data.lieu }}{% if d.data.ville %}, {{ d.data.ville }}{% endif %}
+          </span>
+        {% endfor %}
+        {% for d in collections.datesAvenir %}
+          <span class="agenda-ticker-item" aria-hidden="true">
+            📅 {{ d.data.date | dateFr }} — <strong>{{ d.data.spectacle }}</strong> — {{ d.data.lieu }}{% if d.data.ville %}, {{ d.data.ville }}{% endif %}
+          </span>
+        {% endfor %}
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:24px;">
+      <a class="btn" href="{{ '/agenda/' | url }}">Voir toutes les dates</a>
+    </p>
+  {% else %}
+    <p style="text-align:center; max-width:600px; margin:0 auto;">{{ site.agenda_texte }}</p>
+  {% endif %}
 </section>
