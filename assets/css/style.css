@@ -185,6 +185,18 @@ footer > a{
 }
 .contact-social:hover, .contact-social:focus-visible{background:var(--encre); color:var(--parchemin-clair);}
 
+.compagnie-photo{
+  max-width:760px;
+  margin:50px auto 0;
+}
+.compagnie-photo img{
+  width:100%;
+  height:auto;
+  display:block;
+  filter:grayscale(1);
+  box-shadow:0 18px 40px rgba(43,32,19,0.35);
+}
+
 /* Bandeau défilant des prochaines dates, sur l'accueil */
 .agenda-ticker-wrap{
   overflow:hidden;
