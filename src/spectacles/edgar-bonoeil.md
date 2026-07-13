@@ -4,14 +4,14 @@ title: Edgar BonŒil
 order: 3
 accroche: Portrait clownesque d'un personnage à l'œil malicieux, entre tendresse et déraison.
 facts: |
-Genre : Théâtre Burlesque et marionnettes sur table
-Création 2016
-Spectacle tout public à partir de 6/8 ans
-Durée : 30 minutes
-La version cabaret 11 minutes
-distribution
-Jeu Patrick Ruel
-Regard Complice :Juliette Nivard  Glenn Cloarec
+ Genre : Théâtre Burlesque et marionnettes sur table
+ Création 2016
+ Spectacle tout public à partir de 6/8 ans
+ Durée : 30 minutes
+ La version cabaret 11 minutes
+ distribution
+ Jeu Patrick Ruel
+ Regard Complice :Juliette Nivard  Glenn Cloarec
 photo: ""
 video: ""
 dossier: ""
