@@ -26,15 +26,15 @@
     { "nom": "Quevin Nogues", "role": "Photographe à l'oeil de velours" }
   ],
   "amis_liste": [
-    { "nom": "Camille Dorman", "role": "illustratrice" },
-    { "nom": "Christophe Boucher", "role": "Musique, arts numériques, conception systèmes scénographiques et de régies" },
-    { "nom": "Mathilde Blot", "role": "Chargée de diffusion de la compagnie" },
-    { "nom": "La pendue", "role": "Marionnette" },
-    { "nom": "Cie Areski", "role": "Spectacle d'objet et marionnette" },
-    { "nom": "The Pumcliks", "role": "Nomades Musicaux" },
-    { "nom": "BiTonio Anthony Mainguet", "role": "Marionnette" },
-    { "nom": "Fanfare Algdc", "role": "Spectacle, poésie, sueur et folie." },
-    { "nom": "Xavier Constantine", "role": "Spectacle de magie" },
-    { "nom": "Cabaret du Fil à Retordre", "role": "Cabaret marionnettique" }
+    { "nom": "Camille Dorman", "role": "illustratrice", "lien": "" },
+    { "nom": "Christophe Boucher", "role": "Musique, arts numériques, conception systèmes scénographiques et de régies", "lien": "http://www.christopheboucher.fr/" },
+    { "nom": "Mathilde Blot", "role": "Chargée de diffusion de la compagnie", "lien": "https://mathildeblot.com/" },
+    { "nom": "La pendue", "role": "Marionnette", "lien": "http://www.lapendue.fr/" },
+    { "nom": "Cie Areski", "role": "Spectacle d'objet et marionnette", "lien": "http://www.cieareski.com/" },
+    { "nom": "The Pumcliks", "role": "Nomades Musicaux", "lien": "http://www.pumcliks.ch/" },
+    { "nom": "BiTonio Anthony Mainguet", "role": "Marionnette", "lien": "" },
+    { "nom": "Fanfare Algdc", "role": "Spectacle, poésie, sueur et folie.", "lien": "http://alagueuleduchval.fr/" },
+    { "nom": "Xavier Constantine", "role": "Spectacle de magie", "lien": "http://xavierconstantine.com/" },
+    { "nom": "Cabaret du Fil à Retordre", "role": "Cabaret marionnettique", "lien": "" }
   ]
 }
