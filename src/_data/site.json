@@ -1,6 +1,8 @@
 {
   "titre": "Le Théâtre Cabosse",
   "tagline": "Théâtre burlesque et d'objets",
+  "logo": "/assets/img/logo.png",
+  "police": "elegant",
   "photo_accueil": "/assets/img/photo-accueil.jpg",
   "citation_texte": "L'humour renforce notre instinct de survie et sauvegarde notre santé d'esprit.",
   "citation_auteur": "Charlie Chaplin",
