@@ -28,6 +28,30 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Collection de TOUTES les dates de spectacle, triées de la plus proche à la plus lointaine
+  eleventyConfig.addCollection("toutesLesDates", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/dates/*.md").sort((a, b) => {
+      return new Date(a.data.date) - new Date(b.data.date);
+    });
+  });
+
+  // Uniquement les dates à venir (aujourd'hui ou plus tard)
+  eleventyConfig.addCollection("datesAvenir", function (collectionApi) {
+    const aujourdhui = new Date();
+    aujourdhui.setHours(0, 0, 0, 0);
+    return collectionApi.getFilteredByGlob("src/dates/*.md")
+      .filter((item) => new Date(item.data.date) >= aujourdhui)
+      .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
+  });
+
+  // Formate une date ISO (2026-08-14) en "14 août 2026"
+  eleventyConfig.addFilter("dateFr", function (value) {
+    if (!value) return "";
+    const d = new Date(value);
+    const mois = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+    return `${d.getUTCDate()} ${mois[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+  });
+
   return {
     dir: {
       input: "src",
