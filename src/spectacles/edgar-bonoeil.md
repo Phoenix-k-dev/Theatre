@@ -12,7 +12,7 @@ facts: |
   distribution
   Jeu Patrick Ruel
   Regard Complice :Juliette Nivard  Glenn Cloarec
-photo: ""
+photo: "/assets/img/Les-mystéres-dEdgar-1-245x300.jpg"
 video: ""
 dossier: ""
 ---
