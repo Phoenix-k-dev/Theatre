@@ -24,7 +24,7 @@ En cinq tableaux avec des mots et des marionnettes sur table, la chevalerie et l
 Note d’intention : Lost El Mancho inspiré du livre Don Quichotte, roman à succès de Miguel Cervantès : El Ingenioso Hidalgo Don Quijote de la Mancha.
 Et de « Lost en la Mancha », documentaire sur un film jamais fini de Terry Gilliam.
 
-photo: asset/img/
+photo: "asset/img/
 
 Pourquoi certains héros deviennent difficiles à retranscrire, pourquoi certaines aventures sont impossibles à achever ?
 Qu’est ce qui nous pousse à nous investir dans le réel ? Pourquoi Don Quichotte est-il toujours d’actualité, cet humour décapant affreusement viril, qui nous pousse surtout à rire de nous-mêmes. Don Quichotte ne mourra jamais, Chevalier à la triste figure et au cœur d’or il le restera.
