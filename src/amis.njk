@@ -9,13 +9,24 @@ permalink: /les-amis-des-chiffons-et-dailleurs/index.html
 </div>
 <div class="show-rule"></div>
 
-<div class="show-body">
-  <ul style="list-style:none; font-size:1.1rem; line-height:1.9; grid-column:1/-1; max-width:640px;">
-    {% for ami in site.amis_liste %}
-      <li style="margin-bottom:14px;">
-        <strong style="color:var(--brique);">{{ ami.nom }}</strong><br>
-        {{ ami.role }}
-      </li>
-    {% endfor %}
-  </ul>
+<div class="show-body show-body--with-photo">
+  <div class="show-text">
+    <ul class="amis-list">
+      {% for ami in site.amis_liste %}
+        <li>
+          {% if ami.lien %}
+            <a href="{{ ami.lien }}" target="_blank" rel="noopener" class="amis-nom">{{ ami.nom }}</a>
+          {% else %}
+            <strong class="amis-nom">{{ ami.nom }}</strong>
+          {% endif %}
+          <br>
+          {{ ami.role }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="show-photo amis-photo" role="img" aria-label="Portrait de groupe de la compagnie">
+    <img src="{{ '/assets/img/amis.jpg' | url }}" alt="Portrait de groupe de la compagnie">
+  </div>
 </div>
