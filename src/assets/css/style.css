@@ -197,6 +197,17 @@ footer > a{
   box-shadow:0 18px 40px rgba(43,32,19,0.35);
 }
 
+.amis-list{list-style:none; font-size:1.1rem; line-height:1.9;}
+.amis-list li{margin-bottom:18px;}
+.amis-nom{
+  color:var(--brique);
+  font-weight:600;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+a.amis-nom:hover, a.amis-nom:focus-visible{border-color:var(--brique);}
+.amis-photo{aspect-ratio:1/1;}
+
 /* Bandeau défilant des prochaines dates, sur l'accueil */
 .agenda-ticker-wrap{
   overflow:hidden;
