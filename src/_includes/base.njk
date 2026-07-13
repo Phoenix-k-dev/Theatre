@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ title }} – {{ site.titre }}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
 <script>
   // Redirige automatiquement vers /admin/ si on arrive ici via un lien
@@ -26,7 +26,7 @@
   })();
 </script>
 </head>
-<body>
+<body class="police-{{ site.police or 'elegant' }}">
 
 <svg class="mechanical-bg" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
   <g fill="none" stroke="#8a3f2e" stroke-width="2" opacity="0.35">
@@ -40,7 +40,7 @@
 </svg>
 
 <header>
-  <a class="logo-badge" href="{{ '/' | url }}" aria-label="Retour à l'accueil"><img src="{{ '/assets/img/logo.png' | url }}" alt="Logo Théâtre Cabosse"></a>
+  <a class="logo-badge" href="{{ '/' | url }}" aria-label="Retour à l'accueil"><img src="{{ site.logo | url }}" alt="Logo Théâtre Cabosse"></a>
   <div class="divider"></div>
 
   {% if isHome %}
@@ -93,7 +93,7 @@
 <footer>
   {% if not isHome %}<a href="{{ '/' | url }}">← Retour à l'accueil</a><br>{% endif %}
   <a href="{{ '/' | url }}" class="footer-logo" aria-label="Retour à l'accueil">
-    <img src="{{ '/assets/img/logo.png' | url }}" alt="Logo Théâtre Cabosse">
+    <img src="{{ site.logo | url }}" alt="Logo Théâtre Cabosse">
   </a>
   <div class="socials">
     <a href="{{ site.facebook_url }}" aria-label="Facebook" class="social-icon">
