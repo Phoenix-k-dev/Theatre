@@ -7,27 +7,26 @@ isHome: false
 </div>
 <div class="show-rule"></div>
 
-<div class="show-body">
-  <div class="facts">
-    {{ facts | nl2br | safe }}
+{% if mise_en_page == 'fiche' %}
+  {# Variante : fiche technique + petite photo en haut, texte en pleine largeur en dessous #}
+  <div class="show-body show-body--fiche">
+    <div class="facts">
+      {{ facts | nl2br | safe }}
+    </div>
+    {% if photo %}
+    <div class="show-photo show-photo--{{ photo_ratio or 'portrait' }} show-photo--small" role="img" aria-label="Photographie du spectacle {{ title }}">
+      <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
+    </div>
+    {% endif %}
   </div>
-</div>
 
-<div class="show-body show-body--with-photo{% if photo_position == 'gauche' %} show-body--photo-left{% endif %}" style="padding-top:36px;">
-  {% if photo and photo_position == 'gauche' %}
-  <div class="show-photo show-photo--{{ photo_ratio or 'portrait' }}" role="img" aria-label="Photographie du spectacle {{ title }}">
-    <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
-  </div>
-  {% endif %}
-
-  <div class="show-text">
-    <div class="description">
+  <div class="section" style="padding-top:40px;">
+    <div class="description description--full">
       {{ content | safe }}
       {% if dossier %}
         <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
       {% endif %}
     </div>
-
     {% if credits %}
     <div class="credits">
       {{ credits | nl2br | safe }}
@@ -35,12 +34,59 @@ isHome: false
     {% endif %}
   </div>
 
-  {% if photo and photo_position != 'gauche' %}
-  <div class="show-photo show-photo--{{ photo_ratio or 'portrait' }}" role="img" aria-label="Photographie du spectacle {{ title }}">
-    <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
+  {% if affiche %}
+  <div class="section" style="padding-top:0;">
+    <div class="show-affiche">
+      <img src="{{ affiche | url }}" alt="Affiche du spectacle {{ title }}">
+    </div>
   </div>
   {% endif %}
-</div>
+
+{% else %}
+  {# Variante standard : photo et texte côte à côte #}
+  <div class="show-body">
+    <div class="facts">
+      {{ facts | nl2br | safe }}
+    </div>
+  </div>
+
+  <div class="show-body show-body--with-photo{% if photo_position == 'gauche' %} show-body--photo-left{% endif %}" style="padding-top:36px;">
+    {% if photo and photo_position == 'gauche' %}
+    <div class="show-photo show-photo--{{ photo_ratio or 'portrait' }}" role="img" aria-label="Photographie du spectacle {{ title }}">
+      <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
+    </div>
+    {% endif %}
+
+    <div class="show-text">
+      <div class="description">
+        {{ content | safe }}
+        {% if dossier %}
+          <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
+        {% endif %}
+      </div>
+
+      {% if credits %}
+      <div class="credits">
+        {{ credits | nl2br | safe }}
+      </div>
+      {% endif %}
+    </div>
+
+    {% if photo and photo_position != 'gauche' %}
+    <div class="show-photo show-photo--{{ photo_ratio or 'portrait' }}" role="img" aria-label="Photographie du spectacle {{ title }}">
+      <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
+    </div>
+    {% endif %}
+  </div>
+
+  {% if affiche %}
+  <div class="section" style="padding-top:0;">
+    <div class="show-affiche">
+      <img src="{{ affiche | url }}" alt="Affiche du spectacle {{ title }}">
+    </div>
+  </div>
+  {% endif %}
+{% endif %}
 
 {% if video %}
 <div class="show-body" style="padding-top:60px;">
