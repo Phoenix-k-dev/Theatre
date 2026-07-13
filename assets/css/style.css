@@ -185,6 +185,80 @@ footer > a{
   transition:background 0.2s ease, color 0.2s ease;
 }
 .contact-social:hover, .contact-social:focus-visible{background:var(--encre); color:var(--parchemin-clair);}
+
+/* Bandeau défilant des prochaines dates, sur l'accueil */
+.agenda-ticker-wrap{
+  overflow:hidden;
+  border-top:1px solid var(--ligne);
+  border-bottom:1px solid var(--ligne);
+  padding:16px 0;
+}
+.agenda-ticker{
+  display:flex;
+  width:max-content;
+  animation:agenda-scroll 30s linear infinite;
+}
+.agenda-ticker-item{
+  font-family:'Jost',sans-serif;
+  font-size:0.95rem;
+  white-space:nowrap;
+  padding:0 40px;
+  color:var(--encre);
+}
+.agenda-ticker-item strong{color:var(--brique); font-weight:500;}
+@keyframes agenda-scroll{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+@media (prefers-reduced-motion: reduce){
+  .agenda-ticker{animation:none; flex-wrap:wrap; width:auto;}
+}
+
+/* Page Agenda : liste complète */
+.agenda-list{
+  max-width:720px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+.agenda-item{
+  display:flex;
+  gap:28px;
+  padding:24px 0;
+  border-bottom:1px solid var(--ligne);
+  align-items:baseline;
+}
+.agenda-date{
+  flex:0 0 auto;
+  min-width:150px;
+  font-family:'Jost',sans-serif;
+}
+.agenda-jour{display:block; font-weight:500; color:var(--brique);}
+.agenda-heure{display:block; font-size:0.85rem; opacity:0.75; margin-top:2px;}
+.agenda-infos h3{
+  font-family:'Cormorant Garamond', serif;
+  font-weight:600;
+  font-size:1.3rem;
+  margin-bottom:4px;
+}
+.agenda-infos p{font-size:1rem;}
+.agenda-billet{
+  display:inline-block;
+  margin-top:10px;
+  font-family:'Jost',sans-serif;
+  font-size:0.82rem;
+  letter-spacing:0.04em;
+  color:var(--encre);
+  border-bottom:1px solid var(--brique);
+  text-decoration:none;
+}
+.agenda-billet:hover, .agenda-billet:focus-visible{color:var(--brique);}
+
+@media (max-width:600px){
+  .agenda-item{flex-direction:column; gap:6px;}
+  .agenda-date{min-width:0;}
+}
 .socials{display:flex; justify-content:center; gap:26px; margin:16px 0 20px; font-family:'Jost',sans-serif; font-size:0.85rem;}
 .socials a{color:var(--encre); text-decoration:none; border-bottom:1px solid transparent;}
 .socials a:hover, .socials a:focus-visible{border-color:var(--brique);}
