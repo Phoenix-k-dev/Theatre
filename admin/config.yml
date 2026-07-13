@@ -39,6 +39,15 @@ collections:
         default: "portrait"
         required: false
       - { label: "Crédits (mise en scène, regard complice...)", name: "credits", widget: "text", required: false, hint: "Une ligne par information" }
+      - label: "Mise en page"
+        name: "mise_en_page"
+        widget: "select"
+        options:
+          - { label: "Standard (photo et texte côte à côte)", value: "standard" }
+          - { label: "Fiche (petite photo à côté de la fiche technique, texte en dessous)", value: "fiche" }
+        default: "standard"
+        required: false
+      - { label: "Affiche (image pleine largeur, en bas de page)", name: "affiche", widget: "image", required: false }
       - { label: "Lien vidéo YouTube", name: "video", widget: "string", required: false, hint: "Colle simplement le lien de la vidéo YouTube (ex: https://youtu.be/xxxx)" }
       - { label: "Dossier de diffusion (PDF)", name: "dossier", widget: "file", required: false }
       - { label: "Texte de présentation", name: "body", widget: "markdown" }
