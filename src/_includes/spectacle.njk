@@ -9,7 +9,7 @@ isHome: false
 
 <div class="show-body show-body--with-photo{% if photo_position == 'gauche' %} show-body--photo-left{% endif %}">
   {% if photo and photo_position == 'gauche' %}
-  <div class="show-photo" role="img" aria-label="Photographie du spectacle {{ title }}">
+  <div class="show-photo show-photo--{{ photo_ratio or 'portrait' }}" role="img" aria-label="Photographie du spectacle {{ title }}">
     <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
   </div>
   {% endif %}
@@ -34,7 +34,7 @@ isHome: false
   </div>
 
   {% if photo and photo_position != 'gauche' %}
-  <div class="show-photo" role="img" aria-label="Photographie du spectacle {{ title }}">
+  <div class="show-photo show-photo--{{ photo_ratio or 'portrait' }}" role="img" aria-label="Photographie du spectacle {{ title }}">
     <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
   </div>
   {% endif %}
