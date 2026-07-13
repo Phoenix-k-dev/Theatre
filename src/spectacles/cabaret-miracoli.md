@@ -14,4 +14,4 @@ photo_ratio: paysage
 video: "https://youtu.be/389i7XRCyDw"
 dossier: "https://theatrecabosse.com/wp-content/uploads/2023/01/Cabaret-Miracoli-Dossier-de-diffusion-2023.pdf"
 ---
-Bienvenue à Cabaret Miracoli, un mini cabaret où tout semble prêt à tomber en morceaux — et c'est exactement ce qui fait son charme. Une chenille funambule s'aventure sur une bascule coréenne avec un aplomb qui frôle l'inconscience, tandis qu'un singe adepte du bonneteau tente de rouler l'assistance de ses tours de passe-passe. Au milieu de cette agitation contrôlée, un Monsieur Loyal mène la revue avec un charisme qui compense largement les catastrophes en coulisses.
+Acrobaties bancales et personnages burlesques réunis pour le meilleur et pour le rire autour d’un mini cabaret : Cabaret Miracoli. Un numéro d’acrobatie magnifique d’une chenille du nom de BlueBlue, qui se joue de tous les risques sur une bascule Coréenne. Un Singe magicien du Bonneteau du nom de Snarky. Et un Monsieur Loyal à l’allure Charismatique et aux dons multiples.
