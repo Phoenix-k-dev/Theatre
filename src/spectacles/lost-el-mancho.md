@@ -9,7 +9,7 @@ facts: |
   Se joue en intérieur comme en extérieur
   Durée : 40 minutes
   Création 2017
-photo: ""
+photo: "asset/img/LOST-EL-MANCHO-12-1024x684.jpg"
 video: "https://www.youtube.com/watch?v=PXgkErXbgs4&t=1s"
 dossier: ""
 ---
