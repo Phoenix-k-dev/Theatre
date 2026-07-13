@@ -13,4 +13,14 @@ photo: ""
 video: ""
 dossier: ""
 ---
-Un explorateur intrépide se lance dans une expédition qui tourne rapidement à la catastrophe organisée. Armé d'un courage disproportionné par rapport à ses compétences réelles, Lost El Mancho traverse jungles imaginaires et périls de pacotille avec un aplomb inébranlable. Une aventure burlesque où l'échec devient une forme d'héroïsme à part entière.
+Synopsis
+Don Quichotte joué tour à tour par le comédien, et les marionnettes faites de  métal et de papier, se réveille au beau milieu de ses livres.
+Dans l’ivresse de ses mots il interpelle le public sur sa condition d’humain.
+Cherchant à rattraper son destin il se lance dans les aventures à cœur ouvert et sans protection.
+Sa quête est la notre, celle  du comédien, c’est aussi la quête des mots qui nous cerne et nous donne la possibilité d’aller toujours plus loin.
+
+En cinq tableaux avec des mots et des marionnettes sur table, la chevalerie et l’humour seront mes outils pour Don Quichotte, le dernier rempart contre l’ignorance et la méchanceté. Techniques utilisées : marionnettes sur table, ombre et Muppets
+
+Note d’intention : Lost El Mancho inspiré du livre Don Quichotte, roman à succès de Miguel Cervantès : El Ingenioso Hidalgo Don Quijote de la Mancha.
+Et de « Lost en la Mancha », documentaire sur un film jamais fini de Terry Gilliam.
+
