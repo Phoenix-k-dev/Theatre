@@ -4,13 +4,13 @@ title: "Magie Oulala"
 order: 4
 accroche: "Des tours qui ratent, des tours qui marchent trop bien : la magie prise à son propre piège."
 facts: |
-  Spectacle tout public à partir de 6 ans
-  Théâtre burlesque et magie détournée
-  Se joue en intérieur comme en extérieur
-  Durée : 30 minutes
-  Création 2019
+  Numéro de Cabaret : Magie Comique d’Edgar BonOeil
+  Création 2017-2018
+  Spectacle tout public
+  Durée : 10 minutes
 photo: ""
 video: ""
 dossier: ""
+affiche: /asset/img/
 ---
 Quand notre cher Edgar BonOeil s’essaye à la magie, on sent qu’il ne peut rien lui arriver et je dirai que le plus grand risque est de mourir de rire ; Oulala magie
