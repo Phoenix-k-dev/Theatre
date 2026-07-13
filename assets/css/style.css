@@ -12,7 +12,7 @@ body{
   background-image:url('/assets/img/background.jpg');
   background-repeat:repeat-y;
   background-position:top center;
-  background-size:1100px auto;
+  background-size:100% auto;
   color:var(--encre);
   font-family:'Cormorant Garamond', serif;
   position:relative;
