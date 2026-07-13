@@ -1,0 +1,36 @@
+---
+layout: base.njk
+title: Agenda
+isHome: false
+permalink: /agenda/index.html
+---
+<div class="show-title">
+  <h1>Agenda</h1>
+</div>
+<div class="show-rule"></div>
+
+<div class="section" style="padding-top:50px;">
+  {% if collections.datesAvenir.length > 0 %}
+    <div class="agenda-list">
+      {% for d in collections.datesAvenir %}
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-jour">{{ d.data.date | dateFr }}</span>
+            {% if d.data.heure %}<span class="agenda-heure">{{ d.data.heure }}</span>{% endif %}
+          </div>
+          <div class="agenda-infos">
+            <h3>{{ d.data.spectacle }}</h3>
+            <p>{{ d.data.lieu }}{% if d.data.ville %}, {{ d.data.ville }}{% endif %}</p>
+            {% if d.data.lien_billetterie %}
+              <a href="{{ d.data.lien_billetterie }}" class="agenda-billet">Réserver</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p style="text-align:center; max-width:600px; margin:0 auto;">
+      Les prochaines dates seront annoncées bientôt. Suivez la compagnie sur les réseaux pour ne rien rater.
+    </p>
+  {% endif %}
+</div>
