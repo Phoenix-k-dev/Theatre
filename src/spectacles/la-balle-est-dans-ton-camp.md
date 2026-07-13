@@ -15,7 +15,7 @@ credits: |
   Mise en Scène et interprétation
   Patrick Ruel
   Regard Complice Eric Séban, Cie Pile Poil au millimetre
-video: ""
+video: "https://www.youtube.com/watch?v=Tv9pflMgu9M"
 dossier: "https://theatrecabosse.com/wp-content/uploads/2023/01/La-Balle-est-dans-ton-camp-fiche-technique-JANV-2020_compressed-1.pdf"
 ---
 Notre héros, un clown, un bouffon, vient nous raconter une histoire qui lui est chère. C'est un conte sur la cruauté, sur le quotidien ; cela se passe dans une ferme, la ferme du manoir. C'est l'histoire d'un homme avisé comme peut l'être un clown qui raconte des histoires sur les hommes et sur leurs bêtes. Et à travers la noirceur du manoir de la ferme, on sent le désir de vivre de ces hommes, de ces bêtes, enfermés dans leur rôle.
