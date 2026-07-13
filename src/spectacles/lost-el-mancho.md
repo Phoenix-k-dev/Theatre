@@ -14,6 +14,7 @@ video: "https://www.youtube.com/watch?v=PXgkErXbgs4&t=1s"
 dossier: ""
 ---
 Synopsis
+
 Don Quichotte joué tour à tour par le comédien, et les marionnettes faites de  métal et de papier, se réveille au beau milieu de ses livres.
 Dans l’ivresse de ses mots il interpelle le public sur sa condition d’humain.
 Cherchant à rattraper son destin il se lance dans les aventures à cœur ouvert et sans protection.
