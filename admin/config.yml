@@ -42,6 +42,15 @@ collections:
         fields:
           - { label: "Titre du site", name: "titre", widget: "string" }
           - { label: "Accroche sous le titre", name: "tagline", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image", required: false }
+          - label: "Style de police"
+            name: "police"
+            widget: "select"
+            options:
+              - { label: "Élégant et fin (Jost / Cormorant)", value: "elegant" }
+              - { label: "Doux et arrondi (Quicksand)", value: "doux" }
+              - { label: "Classique (Playfair / Baskerville)", value: "classique" }
+            default: "elegant"
           - { label: "Photo mise en avant sur l'accueil", name: "photo_accueil", widget: "image", required: false }
           - { label: "Texte de la citation", name: "citation_texte", widget: "text" }
           - { label: "Auteur de la citation", name: "citation_auteur", widget: "string" }
