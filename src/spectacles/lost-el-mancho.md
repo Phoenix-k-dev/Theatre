@@ -4,11 +4,10 @@ title: Lost El Mancho
 order: 6
 accroche: Une expédition rocambolesque menée par un aventurier plus courageux que doué.
 facts: |
-  Spectacle tout public à partir de 6 ans
-  Théâtre burlesque et aventure clownesque
-  Se joue en intérieur comme en extérieur
-  Durée : 40 minutes
-  Création 2017
+  Spectacle tout public à partir de 7 ans
+  Théâtre Burlesque et d’objets très animés sur table
+  Durée : 45 minutes
+  Création 2010-2011
 photo: "/asset/img/LOST-EL-MANCHO-12-1024x684.jpg"
 photo_ratio: portrait
 video: "https://www.youtube.com/watch?v=PXgkErXbgs4&t=1s"
