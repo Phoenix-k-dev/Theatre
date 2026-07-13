@@ -28,6 +28,15 @@ collections:
         options: ["droite", "gauche"]
         default: "droite"
         required: false
+      - label: "Format de la photo"
+        name: "photo_ratio"
+        widget: "select"
+        options:
+          - { label: "Paysage (large)", value: "paysage" }
+          - { label: "Portrait (haut)", value: "portrait" }
+          - { label: "Carré", value: "carre" }
+        default: "portrait"
+        required: false
       - { label: "Crédits (mise en scène, regard complice...)", name: "credits", widget: "text", required: false, hint: "Une ligne par information" }
       - { label: "Lien vidéo YouTube", name: "video", widget: "string", required: false, hint: "Colle simplement le lien de la vidéo YouTube (ex: https://youtu.be/xxxx)" }
       - { label: "Dossier de diffusion (PDF)", name: "dossier", widget: "file", required: false }
