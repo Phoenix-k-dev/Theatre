@@ -13,6 +13,8 @@ facts: |
   Jeu Patrick Ruel
   Regard Complice :Juliette Nivard  Glenn Cloarec
 photo: "/assets/img/Les-mystéres-dEdgar-1-245x300.jpg"
+photo_ratio: portrait
+affiche: "/assets/img/edgar-bonoeil-affiche.jpg"
 video: ""
 dossier: ""
 ---
