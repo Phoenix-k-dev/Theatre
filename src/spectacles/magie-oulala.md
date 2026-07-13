@@ -11,6 +11,6 @@ facts: |
 photo: ""
 video: ""
 dossier: ""
-affiche: /asset/img/
+affiche: /asset/img/Edgar_Bon_Oeil_Caf_Pl_m_x-677x1024-1.jpg
 ---
 Quand notre cher Edgar BonOeil s’essaye à la magie, on sent qu’il ne peut rien lui arriver et je dirai que le plus grand risque est de mourir de rire ; Oulala magie
