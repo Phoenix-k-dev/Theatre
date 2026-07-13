@@ -199,11 +199,19 @@ footer > a{
 
 .amis-list{list-style:none; font-size:1.1rem; line-height:1.9;}
 .amis-list li{margin-bottom:18px;}
-.amis-nom{
+.amis-nom,
+a.amis-nom,
+a.amis-nom:link,
+a.amis-nom:visited,
+a.amis-nom:hover,
+a.amis-nom:focus,
+a.amis-nom:active{
   color:var(--brique);
   font-weight:600;
   text-decoration:none;
   border-bottom:1px solid transparent;
+  font-family:inherit;
+  font-size:inherit;
 }
 a.amis-nom:hover, a.amis-nom:focus-visible{border-color:var(--brique);}
 .amis-photo{aspect-ratio:1/1;}
