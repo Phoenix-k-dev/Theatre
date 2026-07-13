@@ -33,6 +33,28 @@ collections:
       - { label: "Dossier de diffusion (PDF)", name: "dossier", widget: "file", required: false }
       - { label: "Texte de présentation", name: "body", widget: "markdown" }
 
+  - name: "dates"
+    label: "Dates de spectacle (Agenda)"
+    label_singular: "Date"
+    folder: "src/dates"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.spectacle}}"
+    identifier_field: spectacle
+    fields:
+      - label: "Spectacle"
+        name: "spectacle"
+        widget: "relation"
+        collection: "spectacles"
+        search_fields: ["title"]
+        display_fields: ["title"]
+        value_field: "title"
+        hint: "Choisis le spectacle concerné par cette date"
+      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Heure", name: "heure", widget: "string", required: false, hint: "Ex: 19h00" }
+      - { label: "Lieu", name: "lieu", widget: "string" }
+      - { label: "Ville", name: "ville", widget: "string", required: false }
+      - { label: "Lien billetterie", name: "lien_billetterie", widget: "string", required: false }
+
   - name: "reglages"
     label: "Réglages du site"
     files:
