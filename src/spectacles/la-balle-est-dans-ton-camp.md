@@ -11,6 +11,7 @@ facts: |
   Le spectacle se joue en intérieur comme en extérieur
 photo: "/assets/img/la-balle-est-dans-ton-camp.jpg"
 photo_position: gauche
+photo_ratio: portrait
 credits: |
   Mise en Scène et interprétation
   Patrick Ruel
