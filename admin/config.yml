@@ -65,6 +65,7 @@ collections:
       - { label: "Image supplémentaire (tout en bas, après la vidéo)", name: "image_bas", widget: "image", required: false }
       - { label: "Lien vidéo YouTube", name: "video", widget: "string", required: false, hint: "Colle simplement le lien de la vidéo YouTube (ex: https://youtu.be/xxxx)" }
       - { label: "Dossier de diffusion (PDF)", name: "dossier", widget: "file", required: false }
+      - { label: "Revue de presse (PDF)", name: "revue_presse", widget: "file", required: false }
       - { label: "Texte de présentation", name: "body", widget: "markdown" }
 
   - name: "dates"
