@@ -388,6 +388,18 @@ footer .rights{font-family:'Jost',sans-serif; font-size:0.72rem; opacity:0.55; l
   .show-photo--small img{object-fit:cover;}
 }
 
+.note-intention{
+  max-width:700px;
+  margin:0 auto;
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+  font-size:1.2rem;
+  line-height:1.7;
+  color:var(--brique);
+}
+.note-intention strong{font-style:normal;}
+
 .credits{
   margin-top:32px;
   font-family:'Jost',sans-serif;
@@ -399,70 +411,4 @@ footer .rights{font-family:'Jost',sans-serif; font-size:0.72rem; opacity:0.55; l
 @media (max-width:640px){
   nav ul{gap:18px; font-size:0.85rem;}
   .top-row{flex-direction:column; align-items:flex-start;}
-}
-
-/* ==========================================================================
-   NOUVEAU LAYOUT : DOUBLE GRILLE CROISÉE (Lost El Mancho)
-   ========================================================================== */
-
-/* Structure de base pour mobile (flux vertical classique) */
-.show-body-custom-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 50px 24px 0;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.show-body-custom-grid .facts {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  font-size: 1.15rem;
-  line-height: 2;
-}
-
-.show-body-custom-grid .description {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  margin-top: 24px;
-}
-
-.show-body-custom-grid .description p {
-  margin-bottom: 20px;
-}
-
-/* Version Ordinateur / Grand Écran (à partir de 860px) */
-@media (min-width: 860px) {
-  .show-body-custom-grid {
-    display: grid;
-    /* Aligné sur tes proportions : Gauche un peu plus large (1.1) et Droite (0.9) */
-    grid-template-columns: 1.1fr 0.9fr; 
-    column-gap: 60px;
-    row-gap: 50px;
-    align-items: start;
-  }
-
-  /* Placement des blocs dans la grille */
-  .grid-gauche-haut {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .grid-droite-haut {
-    grid-column: 2;
-    grid-row: 1;
-    margin-top: -55px; /* Remonte légèrement la première photo comme demandé */
-  }
-
-  .grid-gauche-bas {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .grid-droite-bas {
-    grid-column: 2;
-    grid-row: 2;
-    margin-top: 15px; /* Aligne proprement le texte du bas avec le haut de la photo 2 */
-  }
 }
