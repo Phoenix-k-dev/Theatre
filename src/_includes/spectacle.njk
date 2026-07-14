@@ -159,3 +159,11 @@ isHome: false
   </div>
 </div>
 {% endif %}
+
+{% if image_bas %}
+<div class="section" style="padding-top:0;">
+  <div class="show-affiche">
+    <img src="{{ image_bas | url }}" alt="Image supplémentaire — {{ title }}">
+  </div>
+</div>
+{% endif %}
