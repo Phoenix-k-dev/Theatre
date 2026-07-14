@@ -45,7 +45,21 @@ collections:
         options:
           - { label: "Standard (photo et texte côte à côte)", value: "standard" }
           - { label: "Fiche (petite photo à côté de la fiche technique, texte en dessous)", value: "fiche" }
+          - { label: "Fiche double (2 photos, synopsis + note d'intention + texte)", value: "fiche-double" }
         default: "standard"
+        required: false
+      - { label: "Synopsis (à côté de la 1ère photo — variante fiche double)", name: "synopsis", widget: "text", required: false }
+      - { label: "Note d'intention (centrée, en dessous — variante fiche double)", name: "note_intention", widget: "text", required: false }
+      - { label: "Deuxième photo (variante fiche double)", name: "photo2", widget: "image", required: false }
+      - label: "Format de la deuxième photo"
+        name: "photo2_ratio"
+        widget: "select"
+        options:
+          - { label: "Paysage (large)", value: "paysage" }
+          - { label: "Portrait (haut)", value: "portrait" }
+          - { label: "Carré", value: "carre" }
+          - { label: "Ajusté à la hauteur du texte", value: "ajuste" }
+        default: "ajuste"
         required: false
       - { label: "Affiche (image pleine largeur, en bas de page)", name: "affiche", widget: "image", required: false }
       - { label: "Lien vidéo YouTube", name: "video", widget: "string", required: false, hint: "Colle simplement le lien de la vidéo YouTube (ex: https://youtu.be/xxxx)" }
