@@ -73,7 +73,7 @@ collections:
     label_singular: "Date"
     folder: "src/dates"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{fields.spectacle}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: spectacle
     fields:
       - label: "Spectacle"
@@ -84,7 +84,8 @@ collections:
         display_fields: ["title"]
         value_field: "title"
         hint: "Choisis le spectacle concerné par cette date"
-      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Date de début", name: "date_debut", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Date de fin (si plusieurs jours, sinon laisser vide)", name: "date_fin", widget: "date", format: "YYYY-MM-DD", required: false, hint: "Laisse vide si le spectacle ne dure qu'un seul jour" }
       - { label: "Heure", name: "heure", widget: "string", required: false, hint: "Ex: 19h00" }
       - { label: "Lieu", name: "lieu", widget: "string" }
       - { label: "Ville", name: "ville", widget: "string", required: false }
