@@ -47,6 +47,18 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => new Date(a.data.date_debut) - new Date(b.data.date_debut));
   });
 
+  // Dates passées (avant aujourd'hui), les plus récentes en premier
+  eleventyConfig.addCollection("datesPassees", function (collectionApi) {
+    const aujourdhui = new Date();
+    aujourdhui.setHours(0, 0, 0, 0);
+    return collectionApi.getFilteredByGlob("src/dates/*.md")
+      .filter((item) => {
+        const fin = item.data.date_fin || item.data.date_debut;
+        return new Date(fin) < aujourdhui;
+      })
+      .sort((a, b) => new Date(b.data.date_debut) - new Date(a.data.date_debut));
+  });
+
   // Formate une date ISO (2026-08-14) en "14 août 2026"
   eleventyConfig.addFilter("dateFr", function (value) {
     if (!value) return "";
