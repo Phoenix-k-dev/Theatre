@@ -91,6 +91,20 @@ collections:
       - { label: "Ville", name: "ville", widget: "string", required: false }
       - { label: "Lien billetterie", name: "lien_billetterie", widget: "string", required: false }
 
+  - name: "archives"
+    label: "Archives (dates passées, avant l'agenda en ligne)"
+    files:
+      - file: "src/_data/archives.json"
+        label: "Archives par année"
+        name: "archives"
+        fields:
+          - label: "Années"
+            name: "archives"
+            widget: "list"
+            fields:
+              - { label: "Année", name: "annee", widget: "string" }
+              - { label: "Contenu (une ligne par date)", name: "contenu", widget: "text" }
+
   - name: "reglages"
     label: "Réglages du site"
     files:
