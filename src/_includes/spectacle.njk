@@ -48,6 +48,9 @@ isHome: false
         {% if dossier %}
           <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
         {% endif %}
+        {% if revue_presse %}
+          <a class="dossier-btn" href="{{ revue_presse }}">Revue de Presse</a>
+        {% endif %}
       </div>
       {% if credits %}
       <div class="credits">
@@ -83,6 +86,9 @@ isHome: false
       {{ content | safe }}
       {% if dossier %}
         <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
+      {% endif %}
+      {% if revue_presse %}
+        <a class="dossier-btn" href="{{ revue_presse }}">Revue de Presse</a>
       {% endif %}
     </div>
     {% if credits %}
@@ -120,6 +126,9 @@ isHome: false
         {{ content | safe }}
         {% if dossier %}
           <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
+        {% endif %}
+        {% if revue_presse %}
+          <a class="dossier-btn" href="{{ revue_presse }}">Revue de Presse</a>
         {% endif %}
       </div>
 
