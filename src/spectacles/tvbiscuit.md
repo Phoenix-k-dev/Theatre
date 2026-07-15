@@ -15,6 +15,6 @@ photo_ratio: ajuste
 video: "https://www.youtube.com/watch?v=E8eP3i4rMoE&t=13s"
 image_bas: "/assets/img/tvbiscuit-affiche.jpg"
 dossier: ""
-revue_presse: "/assets/pdf/Revue-de-Presse.pdf-page-001.pdf"
+revue_presse: "/assets/Revue-de-Presse.pdf-page-001.pdf"
 ---
 TV Biscuit c'est l'histoire d'une télé qui se mange, d'une télé qui se croque, le biscuit y est roi. Un animateur de TV à la fois drolatiquement romantique, politiquement ailleurs et stupidement engagé, tout se mange même la chair de notre chair. Autour d'une télévision à l'échelle humaine et inhumaine, défilent des personnages décalés, corrosifs, mais des plus attachants. En jouant le jeu du petit écran, l'humanité en marche se laisse dépasser. Ce spectacle s'amuse avec les folies de notre temps, les incohérences et l'absurdité où tout le monde veut une place, veut sa place, mais il n'y a rien, Monsieur, Madame tout le monde.
