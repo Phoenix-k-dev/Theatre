@@ -10,6 +10,10 @@ permalink: /agenda/index.html
 <div class="show-rule"></div>
 
 <div class="section" style="padding-top:50px;">
+  <div class="section-head">
+    <h2>À venir</h2>
+    <div class="rule"></div>
+  </div>
   {% if collections.datesAvenir.length > 0 %}
     <div class="agenda-list">
       {% for d in collections.datesAvenir %}
@@ -33,4 +37,43 @@ permalink: /agenda/index.html
       Les prochaines dates seront annoncées bientôt. Suivez la compagnie sur les réseaux pour ne rien rater.
     </p>
   {% endif %}
+</div>
+
+{% if collections.datesPassees.length > 0 %}
+<div class="section" style="padding-top:20px;">
+  <div class="section-head">
+    <h2>Dates passées</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="agenda-list agenda-list--passe">
+    {% for d in collections.datesPassees %}
+      <div class="agenda-item agenda-item--passe">
+        <div class="agenda-date">
+          <span class="agenda-jour">{{ d.data.date_debut | dateRangeFr(d.data.date_fin) }}</span>
+        </div>
+        <div class="agenda-infos">
+          <h3>{{ d.data.spectacle }}</h3>
+          <p>{{ d.data.lieu }}{% if d.data.ville %}, {{ d.data.ville }}{% endif %}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<div class="section" style="padding-top:20px;">
+  <div class="section-head">
+    <h2>Archives</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="archives-list">
+    {% for a in archives.archives %}
+      {% if a.contenu %}
+      <details class="archive-annee">
+        <summary>{{ a.annee }}</summary>
+        <div class="archive-contenu">{{ a.contenu | nl2br | safe }}</div>
+      </details>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
