@@ -214,7 +214,7 @@ a.amis-nom:active{
 }
 a.amis-nom{border-bottom:1px solid var(--brique);}
 a.amis-nom:hover, a.amis-nom:focus-visible{opacity:0.75;}
-.amis-photo{aspect-ratio:1/1;}
+.show-photo.amis-photo{aspect-ratio:1/1;}
 
 /* Bandeau défilant des prochaines dates, sur l'accueil */
 .agenda-ticker-wrap{
