@@ -31,17 +31,20 @@ module.exports = function (eleventyConfig) {
   // Collection de TOUTES les dates de spectacle, triées de la plus proche à la plus lointaine
   eleventyConfig.addCollection("toutesLesDates", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/dates/*.md").sort((a, b) => {
-      return new Date(a.data.date) - new Date(b.data.date);
+      return new Date(a.data.date_debut) - new Date(b.data.date_debut);
     });
   });
 
-  // Uniquement les dates à venir (aujourd'hui ou plus tard)
+  // Uniquement les dates à venir (aujourd'hui ou plus tard, en tenant compte de la date de FIN si elle existe)
   eleventyConfig.addCollection("datesAvenir", function (collectionApi) {
     const aujourdhui = new Date();
     aujourdhui.setHours(0, 0, 0, 0);
     return collectionApi.getFilteredByGlob("src/dates/*.md")
-      .filter((item) => new Date(item.data.date) >= aujourdhui)
-      .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
+      .filter((item) => {
+        const fin = item.data.date_fin || item.data.date_debut;
+        return new Date(fin) >= aujourdhui;
+      })
+      .sort((a, b) => new Date(a.data.date_debut) - new Date(b.data.date_debut));
   });
 
   // Formate une date ISO (2026-08-14) en "14 août 2026"
@@ -50,6 +53,22 @@ module.exports = function (eleventyConfig) {
     const d = new Date(value);
     const mois = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
     return `${d.getUTCDate()} ${mois[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+  });
+
+  // Formate une date ou une plage de dates : "14 août 2026" ou "19 - 25 juillet 2026"
+  eleventyConfig.addFilter("dateRangeFr", function (debut, fin) {
+    if (!debut) return "";
+    const mois = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+    const d1 = new Date(debut);
+    if (!fin || fin === debut) {
+      return `${d1.getUTCDate()} ${mois[d1.getUTCMonth()]} ${d1.getUTCFullYear()}`;
+    }
+    const d2 = new Date(fin);
+    const memeMois = d1.getUTCMonth() === d2.getUTCMonth() && d1.getUTCFullYear() === d2.getUTCFullYear();
+    if (memeMois) {
+      return `${d1.getUTCDate()} - ${d2.getUTCDate()} ${mois[d2.getUTCMonth()]} ${d2.getUTCFullYear()}`;
+    }
+    return `${d1.getUTCDate()} ${mois[d1.getUTCMonth()]} - ${d2.getUTCDate()} ${mois[d2.getUTCMonth()]} ${d2.getUTCFullYear()}`;
   });
 
   return {
