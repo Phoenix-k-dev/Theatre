@@ -44,12 +44,12 @@ isHome: true
       <div class="agenda-ticker">
         {% for d in collections.datesAvenir %}
           <span class="agenda-ticker-item">
-            📅 {{ d.data.date | dateFr }} — <strong>{{ d.data.spectacle }}</strong> — {{ d.data.lieu }}{% if d.data.ville %}, {{ d.data.ville }}{% endif %}
+            📅 {{ d.data.date_debut | dateRangeFr(d.data.date_fin) }} — <strong>{{ d.data.spectacle }}</strong> — {{ d.data.lieu }}{% if d.data.ville %}, {{ d.data.ville }}{% endif %}
           </span>
         {% endfor %}
         {% for d in collections.datesAvenir %}
           <span class="agenda-ticker-item" aria-hidden="true">
-            📅 {{ d.data.date | dateFr }} — <strong>{{ d.data.spectacle }}</strong> — {{ d.data.lieu }}{% if d.data.ville %}, {{ d.data.ville }}{% endif %}
+            📅 {{ d.data.date_debut | dateRangeFr(d.data.date_fin) }} — <strong>{{ d.data.spectacle }}</strong> — {{ d.data.lieu }}{% if d.data.ville %}, {{ d.data.ville }}{% endif %}
           </span>
         {% endfor %}
       </div>
