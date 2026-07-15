@@ -15,7 +15,7 @@ permalink: /agenda/index.html
       {% for d in collections.datesAvenir %}
         <div class="agenda-item">
           <div class="agenda-date">
-            <span class="agenda-jour">{{ d.data.date | dateFr }}</span>
+            <span class="agenda-jour">{{ d.data.date_debut | dateRangeFr(d.data.date_fin) }}</span>
             {% if d.data.heure %}<span class="agenda-heure">{{ d.data.heure }}</span>{% endif %}
           </div>
           <div class="agenda-infos">
