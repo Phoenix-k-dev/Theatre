@@ -1,9 +1,7 @@
 ---
 spectacle: "Cabaret Miracoli"
-date_debut: 2026-08-14
-date_fin: 2026-08-16
-heure: "19h00"
+date_debut: 2024-05-18
 lieu: "Théâtre de Poche"
-ville: "Sète"
+ville: "Prades à l’Entonnoir (66)"
 lien_billetterie: ""
 ---
