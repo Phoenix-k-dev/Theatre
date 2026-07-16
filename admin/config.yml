@@ -50,7 +50,7 @@ collections:
         required: false
       - { label: "Synopsis (à côté de la 1ère photo — variante fiche double)", name: "synopsis", widget: "text", required: false }
       - { label: "Note d'intention (centrée, en dessous — variante fiche double)", name: "note_intention", widget: "text", required: false }
-      - { label: "Deuxième photo (variante fiche double)", name: "photo2", widget: "image", required: false }
+      - { label: "Deuxième photo (au-dessus de la première)", name: "photo2", widget: "image", required: false }
       - label: "Format de la deuxième photo"
         name: "photo2_ratio"
         widget: "select"
