@@ -398,6 +398,12 @@ footer .rights{font-family:'Jost',sans-serif; font-size:0.72rem; opacity:0.55; l
   width:100%;
   max-width:340px;
 }
+.show-photo-col{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+.show-photo-col .show-photo-stack{max-width:100%;}
 .show-photo-naturel{
   width:100%;
   box-shadow:0 18px 40px rgba(43,32,19,0.35);
