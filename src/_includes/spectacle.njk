@@ -15,6 +15,7 @@ isHome: false
     </div>
   </div>
 
+  {% if photo2 %}
   <div class="show-body show-body--with-photo" style="padding-top:36px;">
     <div class="show-text">
       <div class="description">
@@ -38,7 +39,6 @@ isHome: false
   </div>
   {% endif %}
 
-  {% if photo2 %}
   <div class="show-body show-body--with-photo show-body--photo-left" style="padding-top:20px;">
     <div class="show-photo-stack">
       <div class="show-photo-naturel">
@@ -63,22 +63,46 @@ isHome: false
     </div>
   </div>
   {% else %}
-  <div class="section" style="padding-top:20px;">
-    <div class="description description--full">
-      {{ content | safe }}
+  {# Pas de 2e photo : une seule grille, chaque colonne empile son propre contenu #}
+  <div class="show-body show-body--with-photo" style="padding-top:36px;">
+    <div class="show-text">
+      <div class="description">
+        {{ synopsis | nl2br | safe }}
+      </div>
       {% if dossier %}
         <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
       {% endif %}
       {% if revue_presse %}
         <a class="dossier-btn" href="{{ revue_presse }}">Revue de Presse</a>
       {% endif %}
+      {% if credits %}
+      <div class="credits">
+        {{ credits | nl2br | safe }}
+      </div>
+      {% endif %}
     </div>
-    {% if credits %}
-    <div class="credits" style="text-align:center;">
-      {{ credits | nl2br | safe }}
+
+    <div class="show-photo-col">
+      {% if photo %}
+      <div class="show-photo-stack">
+        <div class="show-photo-naturel">
+          <img src="{{ photo | url }}" alt="{{ title }} - Photo principale">
+        </div>
+      </div>
+      {% endif %}
+      <div class="description" style="margin-top:24px;">
+        {{ content | safe }}
+      </div>
     </div>
-    {% endif %}
   </div>
+
+  {% if note_intention %}
+  <div class="section" style="padding-top:50px;">
+    <div class="note-intention">
+      {{ note_intention | nl2br | safe }}
+    </div>
+  </div>
+  {% endif %}
   {% endif %}
 
   {% if affiche %}
