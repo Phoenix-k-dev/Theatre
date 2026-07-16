@@ -140,8 +140,15 @@ isHome: false
     </div>
 
     {% if photo and photo_position != 'gauche' %}
-    <div class="show-photo show-photo--{{ photo_ratio or 'portrait' }}" role="img" aria-label="Photographie du spectacle {{ title }}">
-      <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
+    <div class="show-photo-stack">
+      {% if photo2 %}
+      <div class="show-photo-naturel">
+        <img src="{{ photo2 | url }}" alt="Photographie du spectacle {{ title }}">
+      </div>
+      {% endif %}
+      <div class="show-photo-naturel">
+        <img src="{{ photo | url }}" alt="Photographie du spectacle {{ title }}">
+      </div>
     </div>
     {% endif %}
   </div>
