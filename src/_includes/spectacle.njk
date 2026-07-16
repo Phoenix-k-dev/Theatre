@@ -22,8 +22,10 @@ isHome: false
       </div>
     </div>
     {% if photo %}
-    <div class="show-photo show-photo--{{ photo_ratio or 'ajuste' }}" role="img" aria-label="{{ title }} - Photo principale">
-      <img src="{{ photo | url }}" alt="{{ title }} - Photo principale">
+    <div class="show-photo-stack">
+      <div class="show-photo-naturel">
+        <img src="{{ photo | url }}" alt="{{ title }} - Photo principale">
+      </div>
     </div>
     {% endif %}
   </div>
@@ -36,12 +38,13 @@ isHome: false
   </div>
   {% endif %}
 
+  {% if photo2 %}
   <div class="show-body show-body--with-photo show-body--photo-left" style="padding-top:20px;">
-    {% if photo2 %}
-    <div class="show-photo show-photo--{{ photo2_ratio or 'ajuste' }}" role="img" aria-label="{{ title }} - Deuxième photo">
-      <img src="{{ photo2 | url }}" alt="{{ title }} - Deuxième photo">
+    <div class="show-photo-stack">
+      <div class="show-photo-naturel">
+        <img src="{{ photo2 | url }}" alt="{{ title }} - Deuxième photo">
+      </div>
     </div>
-    {% endif %}
     <div class="show-text">
       <div class="description">
         {{ content | safe }}
@@ -59,6 +62,24 @@ isHome: false
       {% endif %}
     </div>
   </div>
+  {% else %}
+  <div class="section" style="padding-top:20px;">
+    <div class="description description--full">
+      {{ content | safe }}
+      {% if dossier %}
+        <a class="dossier-btn" href="{{ dossier }}">Dossier de Diffusion</a>
+      {% endif %}
+      {% if revue_presse %}
+        <a class="dossier-btn" href="{{ revue_presse }}">Revue de Presse</a>
+      {% endif %}
+    </div>
+    {% if credits %}
+    <div class="credits" style="text-align:center;">
+      {{ credits | nl2br | safe }}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
 
   {% if affiche %}
   <div class="section" style="padding-top:0;">
