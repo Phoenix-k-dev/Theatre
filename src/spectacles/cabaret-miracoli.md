@@ -12,6 +12,6 @@ facts: |
 photo: "/assets/img/cabaret-miracoli.jpg"
 photo_ratio: paysage
 video: "https://youtu.be/389i7XRCyDw"
-dossier: "https://theatrecabosse.com/wp-content/uploads/2023/01/Cabaret-Miracoli-Dossier-de-diffusion-2023.pdf"
+dossier: "assets/pdf/La-Balle-est-dans-ton-camp.pdf"
 ---
 Acrobaties bancales et personnages burlesques réunis pour le meilleur et pour le rire autour d’un mini cabaret : Cabaret Miracoli. Un numéro d’acrobatie magnifique d’une chenille du nom de BlueBlue, qui se joue de tous les risques sur une bascule Coréenne. Un Singe magicien du Bonneteau du nom de Snarky. Et un Monsieur Loyal à l’allure Charismatique et aux dons multiples.
